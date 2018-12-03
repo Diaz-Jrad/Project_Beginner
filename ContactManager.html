@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  	<title>Contact manager </title>
+  	<meta charset="utf-8"/>
+  	<script type="text/javascript" src=ContactManager.js></script> 
+	<link rel="stylesheet" type="text/css" href="ContactManager.css"></link>
+</head>
+<body> 
+<form onsubmit="return formSubmitted(event);">
+    <fieldset>
+        <legend>Personal informations</legend>
+        <label>
+            Name :
+            <input type="text" id="name" required>
+        </label>
+        <label>
+            Last Name :
+            <input type="text" id="Lname" required>
+        </label>
+        <label>
+            Email :
+            <input type="email" id="email" required>
+        </label>
+        <br>
+        <button>Add new Contact</button>
+    </fieldset>
+</form>
+
+<label> 
+	search a client by his name :
+ 	<input type="text" onkeyup="setTimeout(searchContact(), 500)" id="Search" required>
+</label>  
+  
+
+<div id="contacts"></div>
+ 
+<p>
+   <button onclick="emptyList();">Empty</button> 
+   <button onclick="saveList();">Save</button> 
+   <button onclick="loadList();">Load</button>
+</p>
+</body>
+</html>
